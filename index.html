@@ -28,8 +28,7 @@
 			}
 
 			.column {
-				background-color: #fff;
-				border: 1px solid #ddd;
+				border: 6px solid #695a5a;
 				border-radius: 8px;
 				width: 30%;
 				padding: 10px;
@@ -37,6 +36,16 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+			}
+
+			.column:nth-child(1) {
+				background-color: rgb(181, 0, 0);
+			}
+			.column:nth-child(2) {
+				background-color: rgb(59, 114, 69);
+			}
+			.column:nth-child(3) {
+				background-color: rgb(88, 86, 86);
 			}
 
 			.column h2 {
@@ -56,26 +65,8 @@
 				transition: background-color 0.3s ease;
 			}
 
-			.task:active {
-				background-color: #45a049;
-			}
-
 			.task.dragging {
 				opacity: 0.5;
-			}
-
-			.column.over {
-				background-color: #f4f4f4;
-				border-color: #bbb;
-			}
-
-			.column h2::after {
-				content: '';
-				display: block;
-				height: 4px;
-				background-color: #4caf50;
-				width: 100%;
-				margin-top: 5px;
 			}
 		</style>
 	</head>
