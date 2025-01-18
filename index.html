@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>tashpulatov</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f0f0f0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+
+			#board {
+				display: flex;
+				justify-content: space-between;
+				width: 80%;
+				max-width: 1200px;
+			}
+
+			.column {
+				background-color: #fff;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				width: 30%;
+				padding: 10px;
+				min-height: 400px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.column h2 {
+				font-size: 1.5rem;
+				margin-bottom: 10px;
+			}
+
+			.task {
+				background-color: #4caf50;
+				color: white;
+				padding: 10px;
+				margin: 10px 0;
+				border-radius: 4px;
+				cursor: move;
+				width: 80%;
+				text-align: center;
+				transition: background-color 0.3s ease;
+			}
+
+			.task:active {
+				background-color: #45a049;
+			}
+
+			.task.dragging {
+				opacity: 0.5;
+			}
+
+			.column.over {
+				background-color: #f4f4f4;
+				border-color: #bbb;
+			}
+
+			.column h2::after {
+				content: '';
+				display: block;
+				height: 4px;
+				background-color: #4caf50;
+				width: 100%;
+				margin-top: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="board">
+			<div class="column" id="todo">
+				<h2>To Do</h2>
+				<div class="task" draggable="true">Task 1</div>
+				<div class="task" draggable="true">Task 2</div>
+			</div>
+
+			<div class="column" id="doing">
+				<h2>Doing</h2>
+				<div class="task" draggable="true">Task 3</div>
+			</div>
+
+			<div class="column" id="done">
+				<h2>Done</h2>
+				<div class="task" draggable="true">Task 4</div>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
